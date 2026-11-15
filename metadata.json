@@ -1,0 +1,6 @@
+{
+  "name": "LexiEase - Dyslexia-Friendly Text Scanner & Reader",
+  "description": "Scan printed text, book pages, or documents via camera or upload, instantly converting into OpenDyslexic font with glare-reducing background colors, customized line/word spacing, reading rulers, and assistive dyslexia reading tools.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

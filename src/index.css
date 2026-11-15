@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  @font-face {
+    font-family: 'OpenDyslexic';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/opendyslexic@latest/files/opendyslexic-latin-400-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'OpenDyslexic';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/opendyslexic@latest/files/opendyslexic-latin-700-normal.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'OpenDyslexic';
+    src: url('https://cdn.jsdelivr.net/npm/@fontsource/opendyslexic@latest/files/opendyslexic-latin-400-italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* UI Mono & Display helper */
+.font-mono-label {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Dyslexia font utility classes */
+.font-opendyslexic {
+  font-family: 'OpenDyslexic', 'Comic Neue', 'Atkinson Hyperlegible', sans-serif;
+}
+
+.font-lexend {
+  font-family: 'Lexend', 'Atkinson Hyperlegible', sans-serif;
+}
+
+.font-atkinson {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+
+.font-comic {
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive, sans-serif;
+}
+
+.font-system {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Scrollbars aligned with quiet gallery palette */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(21, 21, 23, 0.16);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(21, 21, 23, 0.28);
+}
+
+/* Print styling optimized for dyslexia reading handouts */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  nav, header, footer, button, .no-print {
+    display: none !important;
+  }
+}
